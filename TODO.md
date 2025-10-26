@@ -1,6 +1,11 @@
-# TODO for Spacing, Layout, CTA Button, and Animations Enhancement
+# TODO: Enhance Feature Selection Cards
 
-- [ ] Increase spacing between cards and sections
-- [ ] Add responsive grid layout
-- [ ] Add CTA button with gradient, hover bounce, rounded-full
-- [ ] Add stagger fade-in animations to cards
+- [x] Update features array with descriptions and icons
+- [x] Modify card JSX to display icon and description
+- [x] Enhance hover effects with background color change and glow
+- [x] Implement stagger animation for cards
+- [x] Improve overall card design and styling
+
+# TODO: Remove Stats Section from Landing Page
+
+- [x] Remove Accuracy Rate, Images Processed, and Processing Time stats from Landing.tsx

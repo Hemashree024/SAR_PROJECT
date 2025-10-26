@@ -49,21 +49,7 @@ const Landing = () => {
           </button>
         </div>
 
-        {/* Stats Row */}
-        <div className="mt-20 grid grid-cols-3 gap-12 max-w-3xl w-full text-center">
-          <div>
-            <h2 className="text-4xl font-bold text-white drop-shadow-lg">99.9%</h2>
-            <p className="text-gray-400 mt-1">Accuracy Rate</p>
-          </div>
-          <div>
-            <h2 className="text-4xl font-bold text-white drop-shadow-lg">10M+</h2>
-            <p className="text-gray-400 mt-1">Images Processed</p>
-          </div>
-          <div>
-            <h2 className="text-4xl font-bold text-white drop-shadow-lg">{'<5s'}</h2>
-            <p className="text-gray-400 mt-1">Processing Time</p>
-          </div>
-        </div>
+       
       </motion.section>
 
 

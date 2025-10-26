@@ -140,7 +140,7 @@ const FeatureProcessing = () => {
               onClick={() => fileInputRef.current?.click()}
             >
               {previewUrl ? (
-                <img src={previewUrl} alt="Preview" className="max-w-full max-h-96 mx-auto rounded" />
+                <img src={previewUrl} alt="Preview" className="w-full h-auto mx-auto rounded" />
               ) : (
                 <div>
                   <div className="text-4xl mb-4 text-gray-300">📁</div>
@@ -188,7 +188,7 @@ const FeatureProcessing = () => {
 
             {processedUrl && !isProcessing && (
               <div>
-                <img src={processedUrl} alt="Processed" className="max-w-full max-h-96 mx-auto rounded mb-4" />
+                <img src={processedUrl} alt="Processed" className="w-full h-auto mx-auto rounded mb-4" />
                 <div className="flex space-x-4">
                   <button
                     className="flex-1 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"

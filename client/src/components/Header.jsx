@@ -20,7 +20,7 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive
                   ? 'text-blue-500 font-bold px-2 py-1 rounded'
-                  : 'text-gray-400 hover:text-white hover:scale-105 hover:bg-white hover:bg-opacity-10 transition px-2 py-1 rounded'
+                  : 'text-white font-bold hover:text-white hover:scale-105 transition px-2 py-1 rounded'
               }
             >
               Home
@@ -30,7 +30,7 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive
                   ? 'text-blue-500 font-bold px-2 py-1 rounded'
-                  : 'text-gray-400 hover:text-white hover:scale-105 hover:bg-white hover:bg-opacity-10 transition px-2 py-1 rounded'
+                  : 'text-white font-bold hover:text-white hover:scale-105 transition px-2 py-1 rounded'
               }
             >
               Features
@@ -41,7 +41,7 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive
                   ? 'text-blue-500 font-bold px-2 py-1 rounded'
-                  : 'text-gray-400 hover:text-white hover:scale-105 hover:bg-white hover:bg-opacity-10 transition px-2 py-1 rounded'
+                  : 'text-white font-bold hover:text-white hover:scale-105 transition px-2 py-1 rounded'
               }
             >
               Select Feature

@@ -70,21 +70,6 @@ const Landing: React.FC = () => {
             Get Started
           </button>
         </div>
-        {/* Stats */}
-        <div className="mt-24 grid grid-cols-3 gap-12 max-w-4xl w-full text-center">
-          <div>
-            <h2 className="text-5xl font-bold drop-shadow-lg">99.9%</h2>
-            <p className="text-gray-400 mt-2">Accuracy Rate</p>
-          </div>
-          <div>
-            <h2 className="text-5xl font-bold drop-shadow-lg">10M+</h2>
-            <p className="text-gray-400 mt-2">Images Processed</p>
-          </div>
-          <div>
-            <h2 className="text-5xl font-bold drop-shadow-lg">5s</h2>
-            <p className="text-gray-400 mt-2">Processing Time</p>
-          </div>
-        </div>
       </motion.div>
 
       {/* Features Section */}

@@ -1,27 +1,30 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, ChangeEvent, DragEvent } from 'react';
 import { motion } from 'framer-motion';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+type FeatureType = 'building' | 'road' | 'colorization';
+
 const FeatureProcessing = () => {
-  const { feature } = useParams();
+  const { feature } = useParams<{ feature: FeatureType }>();
   const navigate = useNavigate();
-  const fileInputRef = useRef(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [previewUrl, setPreviewUrl] = useState(null);
-  const [processedUrl, setProcessedUrl] = useState(null);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [processedUrl, setProcessedUrl] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
+ 
 
-  const featureTitles = {
+  const featureTitles: Record<FeatureType, string> = {
     building: 'Building Detection',
     road: 'Road Detection',
     colorization: 'Image Colorization'
   };
 
-  const handleFileSelect = (event) => {
-    const file = event.target.files?.[0];
+  const handleFileSelect = (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0] ?? null;
     if (file) {
       setSelectedFile(file);
       setPreviewUrl(URL.createObjectURL(file));
@@ -30,9 +33,9 @@ const FeatureProcessing = () => {
     }
   };
 
-  const handleDrop = (event) => {
+  const handleDrop = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
-    const file = event.dataTransfer.files[0];
+    const file = event.dataTransfer.files[0] ?? null;
     if (file) {
       setSelectedFile(file);
       setPreviewUrl(URL.createObjectURL(file));
@@ -41,7 +44,7 @@ const FeatureProcessing = () => {
     }
   };
 
-  const handleDragOver = (event) => {
+  const handleDragOver = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
   };
 
@@ -97,7 +100,7 @@ const FeatureProcessing = () => {
 
   return (
     <motion.div
-      className="min-h-screen bg-gray-50 p-8"
+      style={{ minHeight: '100vh', backgroundColor: '#f9fafb', padding: '2rem' }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -173,7 +176,11 @@ const FeatureProcessing = () => {
 
             {processedUrl && !isProcessing && (
               <div>
-                <img src={processedUrl} alt="Processed" className="max-w-full max-h-64 mx-auto rounded mb-4" />
+                <img
+                  src={processedUrl}
+                  alt="Processed"
+                  className="max-w-full max-h-64 mx-auto rounded mb-4"
+                />
                 <div className="flex space-x-4">
                   <button
                     className="flex-1 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
