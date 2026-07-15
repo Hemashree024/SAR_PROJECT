@@ -1,6 +1,7 @@
 # Major Project Integration - 7th Semester
 
 A comprehensive full-stack application integrating multiple deep learning models for image processing tasks including building detection, road detection, and image colorization.
+[HEMA FINAL MAJOR-REPORT  (1).pdf](https://github.com/user-attachments/files/30040914/HEMA.FINAL.MAJOR-REPORT.1.pdf)
 
 ## 📋 Table of Contents
 
