@@ -43,6 +43,12 @@ This is a **full-stack web application** designed for semantic image analysis an
 - **Frontend**: React.js application with TypeScript support
 - **ML Modules**: Pre-trained deep learning models for specialized tasks
 
+## Output:
+<img width="447" height="677" alt="image" src="https://github.com/user-attachments/assets/ffa16243-004e-4a56-867c-2a0322178423" />
+<img width="447" height="702" alt="image" src="https://github.com/user-attachments/assets/8dd0af7c-8ce9-45b1-97bf-b090a839cb68" />
+<img width="472" height="697" alt="image" src="https://github.com/user-attachments/assets/5b36e116-0f1b-4e53-bad0-b9b281f3d692" />
+<img width="465" height="237" alt="image" src="https://github.com/user-attachments/assets/4d415f62-97b2-4d28-9f13-2d2492853cb7" />
+
 ## 🏗️ Project Structure
 
 ```
